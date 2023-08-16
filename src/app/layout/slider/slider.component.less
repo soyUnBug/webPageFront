@@ -1,4 +1,4 @@
-.app-slider{
+.app-slider {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -8,73 +8,81 @@
 
     color: #FFF;
 
-    background-image: url('../../../assets/images/template.png');
+    //background-image: url('../../../assets/images/template.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.app-slider > .content{
+.app-slider > .content {
     display: inherit;
     align-items: center;
 }
 
-.app-slider > .content > .label{
+.app-slider > .content > .label {
     display: inherit;
-    grid-template-columns: calc(75% - 4rem) 2rem calc(25% - 4rem) 2rem;
-
-    max-width: 75%;
-    min-width: 75%;
+    grid-template-columns: calc(100% - 14rem) 2rem 10rem 2rem;
 
     border-radius: 0 5px 5px 0;
 
-    p{
+    p {
         font-size: 1rem;
-        text-align: center;
 
         background-color: #181818FF;
         height: 100%;
         margin: 0;
     }
 
-    span{
+    span {
         background-color: #181818FF;
     }
 
-    img{
+    img {
         position: relative;
         top: -7.5%;
         background-color: antiquewhite; // borrar
 
-        min-width: 115%;
+        min-width: 8rem;
         min-height: 115%;
-        max-width: 115%;
+        max-width: 10rem;
         max-height: 115%;
 
         border-radius: 3%;
 
         box-shadow: 0 0 2px 2px #00000044;
     }
+    transition: width 0.5s, max-width 0.5s;
 }
-.app-slider > .content > .label:nth-last-child(1){
+
+.app-slider > .content > .label :nth-last-child(1) {
     border-radius: 0 5px 5px 0;
-    background-color: #FF0;
 }
 
-@media (max-width: 480px){
+.app-slider > .content > .label > * {
+    min-height: 8rem;
+    max-height: 10rem;
+}
+
+@media (max-width: 480px) {
 
 }
-@media (min-width: 481px) and (max-width: 767px){
-    .app-slider > .content > .label{
-        background-color: red;
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .app-slider > .content > .label {
+        max-width: 90%;
+        width: 90%;
     }
 }
-@media (min-width: 768px) and (max-width: 1023px){
-    .app-slider > .content > .label{
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .app-slider > .content > .label {
+        max-width: 85%;
+        width: 85%;
     }
 }
-@media (min-width: 1024px){
-    .app-slider > .content > .label{
 
+@media (min-width: 1024px) {
+    .app-slider > .content > .label {
+        max-width: 75%;
+        width: 75%;
     }
 }
